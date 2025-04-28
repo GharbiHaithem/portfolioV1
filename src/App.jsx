@@ -19,8 +19,8 @@ function App() {
    <Main theme={theme} setTheme={setTheme}/>
  </div>
     </div>
-    {open&& <div className='fixed w-full h-full  top-10 left-0 backdrop-blur-md p-5'> 
-      <nav className={`px-2 py-2 mb-4   ${theme==="light" ? 'bg-[#fff]' :'bg-[#0008]'}  relative`}>
+    {open&& <div className='fixed w-full h-full  top-0 z-50 left-0 backdrop-blur-md p-5'> 
+      <nav className={`px-2 py-2 mb-4  rounded-lg shadow-sm shadow-slate-100 ${theme==="light" ? 'bg-[#fff]' :'bg-[#0008]'}  relative`}>
         <span className='absolute right-2 top-2 c cursor-pointer'  onClick={()=>setOpen(false)}><CgClose className='text-3xl'/></span>
         <ul className='flex gap-3 flex-col'>
           <li><a  >About</a></li>
