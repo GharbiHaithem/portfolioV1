@@ -1,0 +1,14 @@
+.card:hover{
+      transform: rotate(2deg); /* Rotation de 45 degrés */
+      border: 1px solid var(--blue);
+      border-radius: 0.5rem
+}
+
+
+.more{
+  color:var(--blue);
+  border:1px dotted var(--blue);
+  border-radius: 30px;
+}
+
+

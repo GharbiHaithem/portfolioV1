@@ -1,0 +1,84 @@
+header nav li {
+      position: relative;
+      width: max-content; /* Garde la largeur du contenu au poids le plus fort */
+    }
+    
+header nav li a {
+ 
+      font-weight: 500;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 12px;
+  
+}
+header nav li a:hover {
+      cursor: pointer;
+      color: var(--blue);
+      font-weight: 300;
+}
+header nav.dark{
+      padding: 0.77rem 1.6rem;
+      box-shadow: 0px 1px 2px var(--blue);
+      background-color: #242323b2;
+      border-radius: 30px;
+}
+header nav.light  {
+      padding: 0.77rem 1.6rem;
+      box-shadow: 0px 1px 2px var(--blue);
+      background-color: #ffffff;
+      border-radius: 30px;
+      color: black !important;
+}
+header ul {
+      gap: 16px;
+}
+
+.sun {
+      color: var(--blue);
+      transition: 0.3s;
+}
+.darkmode {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--blue);
+      transition: border-color 0.3s;
+      border-radius: 50%;
+      cursor: pointer;
+}
+.darkmode:hover .sun {
+      transform: scale(1.2);
+      color: rgba(255, 217, 0, 0.83);
+} 
+.x{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--blue);
+      transition: border-color 0.3s;
+      border-radius: 50%;
+      cursor: pointer;    
+}
+.x:hover{
+      transform: scale(1.2);
+      color: rgba(255, 217, 0, 0.83);
+}
+.darkmode:hover {
+      border-color: rgba(255, 217, 0, 0.83) !important;
+}
+.darkmode {
+      display: none; /* Caché par défaut */
+    }
+    
+    @media (max-width: 700px) {
+      .darkmode {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
