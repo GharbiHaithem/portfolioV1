@@ -2,6 +2,7 @@ import React from 'react'
 import './Main.css'
 import { FaGithub } from "react-icons/fa";
 import { BsLink } from "react-icons/bs";
+import { HiMiniArrowRightCircle } from "react-icons/hi2";
 const myProjects = [
   { title: 'E-commerce Website', category: 'e-commerce',description:`
      <ul class="features-list  text-xs">
@@ -93,9 +94,7 @@ const Main = ({setTheme,theme}) => {
            </div>
               <button className="inline-flex more   mt-3 items-center  mb-2 p-1 mx-2 px-2 text-sm font-medium text-center">
                  more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
+                 <HiMiniArrowRightCircle />
               </button>
             </div>
             </div>
