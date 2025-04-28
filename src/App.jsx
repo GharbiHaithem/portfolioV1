@@ -13,7 +13,7 @@ function App() {
     <div className={` ${theme} mb-5 h-[max-content]`}>
     <div className='md:w-[80%] w-full  p-5 mx-auto '>
    <Header setTheme={setTheme} theme={theme} setOpen={setOpen} open={open}/>
- <div className='py-4'>
+ <div className='py-10'>
  <Hero />
    <div className='divider' />
    <Main theme={theme} setTheme={setTheme}/>

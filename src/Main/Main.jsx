@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Main.css'
 import { FaGithub } from "react-icons/fa";
 import { BsLink } from "react-icons/bs";
 import { HiMiniArrowRightCircle } from "react-icons/hi2";
+import { FaRocketchat } from "react-icons/fa";
+import { HiShoppingBag } from "react-icons/hi2";
+import { PiNetworkThin } from "react-icons/pi";
+import { CiYoutube } from "react-icons/ci";
+import { MdOutlineSecurity } from "react-icons/md";
 const myProjects = [
   { title: 'E-commerce Website', category: 'e-commerce',description:`
      <ul class="features-list  text-xs">
@@ -56,11 +61,34 @@ const myProjects = [
 
 ]
 const Main = ({setTheme,theme}) => {
+  const[newArr,setNewArr]= useState(myProjects)
+  const[active,setActive]=useState(null)
+  const filterByCategory = (category) => {
+    // Si on clique sur la même catégorie, réinitialiser
+    if (active === category) {
+      setNewArr(myProjects);
+      setActive(null);
+    } else {
+      setActive(category);
+      setNewArr(myProjects.filter(item => 
+        item?.category?.toLowerCase() === category.toLowerCase()
+      ));
+    }
+  };
+  console.log(newArr)
   return (
 
-    <div className='flex flex-wrap gap-5 mt-5'>
-      {myProjects && myProjects?.map((item) => (
-        <div className={`card  ${theme==='dark' ? 'bg-[#39383868]' :'bg-white'}  md:w-[calc(25%-20px)] w-[80%] mx-auto
+ <div className='flex flex-col gap-10  mt-5'>
+  <div className='flex flex-wrap gap-5'>
+  <button  onClick={() => filterByCategory('e-commerce')}  className={`${active==='e-commerce' ?'active' : ''} md:text-lg text-sm ${theme==="dark"  ? 'dark' : null} rounded-md px-2 py-2 btn`} ><HiShoppingBag  className='text-2xl'/>E-Commerce </button>
+  <button  onClick={() => filterByCategory('tchat')}  className={`${active==='tchat' ?'active' : ''}  md:text-lg text-sm  ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><FaRocketchat  className='text-2xl'/>Chat Application </button>
+  <button  onClick={() => filterByCategory('socialmedia')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><PiNetworkThin   className='text-2xl'/>Social Media </button>
+  <button onClick={() => filterByCategory('Security')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><CiYoutube   className='text-2xl'/>Youtube Clone </button>
+  <button onClick={() => filterByCategory('serigraphie')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><MdOutlineSecurity className='text-2xl'   />3S Security </button>
+  </div>
+     <div className='flex flex-wrap gap-5 mt-5'>
+      {newArr && newArr?.map((item,i) => (
+        <div  key={i} className={`card  ${theme==='dark' ? 'bg-[#39383868]' :'bg-white'}  md:w-[calc(25%-20px)] w-[80%] mx-auto
          transition-filter duration-500 ease-in-out rounded-lg `}>
           <div className="max-w-sm   rounded-lg shadow-sm dark:bg-gray-800 ">
            
@@ -106,6 +134,7 @@ const Main = ({setTheme,theme}) => {
 
 
     </div>
+ </div>
 
   )
 }

@@ -12,7 +12,7 @@ const Header = ({open,setOpen,theme,setTheme}) => {
    }
   },[theme])
   return (
- <div className='fixed top-0 left-0 w-full z-50 bg-transparent dark:bg-gray-900 shadow-sm'>
+ <div className={`fixed top-0 left-0 w-full z-50 ${theme==="light" ? 'bg-white' : 'bg-gray-900'}  shadow-sm`}>
       <header className='container mx-auto px-4 flex justify-between items-center py-4 md:py-5'>
   <div className='md:block hidden'/>
       <div className='darkmode'  onClick={()=>setOpen(true)}><RiMenuFill className='text-2xl sun'  /> </div>

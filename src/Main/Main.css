@@ -10,5 +10,23 @@
   border:1px dotted var(--blue);
   border-radius: 30px;
 }
-
-
+.btn{
+  color: var(--blue);
+  background-color: transparent;
+  border: 1px solid var(--blue);
+  display:flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn.dark.active{
+  background-color: var(--blue);
+  color: #ffffff;
+}
+.btn.dark{
+  background-color: rgba(85, 82, 82, 0.757);
+}
+.btn:hover{
+  text-align: center;
+  color: white;
+  background-color: var(--blue);
+}
