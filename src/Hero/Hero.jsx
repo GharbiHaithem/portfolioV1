@@ -15,7 +15,12 @@ const Hero = () => {
       <VscVerifiedFilled className='text-3xl' style={{color:"var(--blue)",  transform: "translateY(-15px)",
   transition: "transform 0.3s ease" /* Optional */ }} />
 </div>
-<h1 className='md:text-2xl text-xl  font-bold mt-4'>Software Engineer & UI/UX Designer</h1>
+<h1 className='md:text-4xl text-xl  font-bold mt-4'  style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}}>Software Engineer & UI/UX Designer</h1>
 <p className='md:text-base text-sm md:font-light font-extralight mt-2'> Passionate about building modern web applications with MongoDB, Express.js, React, and Node.js (MERN). I specialize in creating responsive, high-performance interfaces using Tailwind CSS, Bootstrap, and Angular, while ensuring seamless user experiences through thoughtful<b style={{color:'var(--blue)'}}> UI/UX</b> design.</p>
  
 </div>

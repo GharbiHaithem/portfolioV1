@@ -80,11 +80,36 @@ const Main = ({setTheme,theme}) => {
 
  <div className='flex flex-col gap-10  mt-5'>
   <div className='flex flex-wrap gap-5'>
-  <button  onClick={() => filterByCategory('e-commerce')}  className={`${active==='e-commerce' ?'active' : ''} md:text-lg text-sm ${theme==="dark"  ? 'dark' : null} rounded-md px-2 py-2 btn`} ><HiShoppingBag  className='text-2xl'/>E-Commerce </button>
-  <button  onClick={() => filterByCategory('tchat')}  className={`${active==='tchat' ?'active' : ''}  md:text-lg text-sm  ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><FaRocketchat  className='text-2xl'/>Chat Application </button>
-  <button  onClick={() => filterByCategory('socialmedia')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><PiNetworkThin   className='text-2xl'/>Social Media </button>
-  <button onClick={() => filterByCategory('Security')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><CiYoutube   className='text-2xl'/>Youtube Clone </button>
-  <button onClick={() => filterByCategory('serigraphie')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><MdOutlineSecurity className='text-2xl'   />3S Security </button>
+  <button style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}} onClick={() => filterByCategory('e-commerce')}  className={`${active==='e-commerce' ?'active' : ''} md:text-lg font-semibold  text-sm ${theme==="dark"  ? 'dark' : null} rounded-md px-2 py-2 btn`} ><HiShoppingBag style={{color:'var(--blue)'}} className='text-2xl'/>E-Commerce </button>
+  <button style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}} onClick={() => filterByCategory('tchat')}  className={`${active==='tchat' ?'active' : ''}  md:text-lg text-sm font-semibold   ${theme==="dark" ? 'dark' : null} rounded-md px-2 py-2 btn`} ><FaRocketchat style={{color:'var(--blue)'}} className='text-2xl'/>Chat Application </button>
+  <button style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}}  onClick={() => filterByCategory('socialmedia')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} font-semibold  rounded-md px-2 py-2 btn`} ><PiNetworkThin  style={{color:'var(--blue)'}} className='text-2xl'/>Social Media </button>
+  <button style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}} onClick={() => filterByCategory('Security')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} font-semibold rounded-md px-2 py-2 btn`} ><CiYoutube style={{color:'var(--blue)'}}  className='text-2xl'/>Youtube Clone </button>
+  <button style={{
+  background: 'linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent'
+}} onClick={() => filterByCategory('serigraphie')} className={` md:text-lg text-sm ${theme==="dark" ? 'dark' : null} font-semibold  rounded-md px-2 py-2 btn`} ><MdOutlineSecurity style={{color:'var(--blue)'}} className='text-2xl'   />3S Security </button>
   </div>
      <div className='flex flex-wrap gap-5 mt-5'>
       {newArr && newArr?.map((item,i) => (

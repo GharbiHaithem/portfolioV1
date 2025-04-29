@@ -29,3 +29,16 @@ body{
   color:var(--blue);
 
 }
+.titreColor{
+  background-image: linear-gradient(to right, #d7dde3, #97a5bb, #616f93, #363b6a, #12093f);
+}
+.animated-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
