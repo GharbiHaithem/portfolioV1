@@ -20,7 +20,7 @@ function App() {
    <div className='divider' />
    <Main theme={theme} setTheme={setTheme}/>
    <div className='divider' />
-   <Contact/>
+   <Contact theme={theme}/>
  </div>
     </div>
     {open&& <div className='fixed w-full h-full  top-0 z-50 left-0 backdrop-blur-md p-5'> 
